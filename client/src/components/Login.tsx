@@ -1,6 +1,4 @@
 
-
-// export default Login;
 import React, { useEffect, useState } from 'react';
 import SoftBackdrop from './SoftBackdrop';
 import { useAuth } from '../context/AuthContext';
@@ -31,7 +29,7 @@ const Login = () => {
         }
     };
 
-    //  Google login handler
+    // ✅ Google login handler
     const handleGoogleLogin = async () => {
         try {
             await loginWithGoogle();
@@ -41,7 +39,7 @@ const Login = () => {
         }
     };
 
-    //  Redirect after login
+    // ✅ Redirect after login
     useEffect(() => {
         if (user) {
             navigate('/');
@@ -122,7 +120,7 @@ const Login = () => {
                         {state === 'login' ? 'Login' : 'Sign up'}
                     </button>
 
-                    {/* Google Login */}
+                    {/* ✅ Google Login */}
                     <button
                         type="button"
                         onClick={handleGoogleLogin}
